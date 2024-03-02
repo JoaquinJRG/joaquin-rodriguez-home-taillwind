@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="js/header.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="js/swiper.js" type="module" defer></script>
+    <title>Clínica Veterinaria</title>
+</head>
+
+<body class="font-mont text-color-texto">
+    <!--Header-->
+    <header class="w-full flex flex-row items-center justify-around border-b rounded-lg py-2 fixed bg-white z-10">
+        <a href="#" id="logo">
+            <img class="w-10" src="assets/img/logo-azul.png" alt="Logo clínica">
+        </a>
+        <nav class="hidden lg:flex gap-7 items-center">
+            <a class="p-2 text-base text-color-texto font-semibold border border-transparent rounded-2xl hover:border-color-destacado hover:bg-blue-100 transition"
+                href="#">
+                La Clínica
+            </a>
+            <a class="p-2 text-base text-color-texto font-semibold  border border-transparent rounded-2xl hover:border-color-destacado hover:bg-blue-100 transition"
+                href="#">
+                Equipo
+            </a>
+            <a class="p-2 text-base text-color-texto font-semibold border border-transparent rounded-2xl hover:border-color-destacado hover:bg-blue-100 transition"
+                href="#">
+                Comentarios
+            </a>
+        </nav>
+        <a class="hidden lg:flex bg-color-destacado text-white p-2 rounded-xl cursor-pointer hover:scale-110 transition"
+            href="#" id="pedir-cita-btn">
+            Pedir Cita
+        </a>
+        <img class="lg:hidden w-8 h-8 p-1 cursor-pointer border border-transparent rounded-full hover:border-color-destacado hover:bg-blue-100 transition"
+            id="menuBtn" src="assets/icons/menu.svg" alt="Botón menú">
+    </header>
+    <div id="menu-section" class="hidden w-full border-b rounded-lg mt-14 py-3 bg-white z-10 fixed">
+        <nav class="flex flex-col gap-5 items-center justify-center">
+            <a href="#"
+                class="p-2 text-base text-color-texto font-semibold border border-transparent rounded-2xl hover:border-color-destacado hover:bg-blue-100 transition">
+                LaClínica
+            </a>
+            <a href="#"
+                class="p-2 text-base text-color-texto font-semibold border border-transparent rounded-2xl hover:border-color-destacado hover:bg-blue-100 transition">Equipo</a>
+            <a href="#comentarios"
+                class="p-2 text-base text-color-texto font-semibold border border-transparent rounded-2xl hover:border-color-destacado hover:bg-blue-100 transition">Comentarios</a>
+        </nav>
+    </div>
+
+    <!--Main-->
+    <main class="flex flex-col gap-10 pt-16 mx-5 md:mx-10 lg:mx-20 xl:mx-40 text-lg xl:text-xl">
+
+        <!--Inicio-->
+        <section id="inicio" class="grid grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-4 lg:grid-flow-row-3 gap-4 h-screen">
+            <article id="inicio-titulo" class="row-start-1 col-start-1 row-end-3 col-end-2 
+                md:row-start-1 md:col-start-1 md:row-end-2 md:col-end-3 
+                lg:row-start-1 lg:col-start-1 lg:row-end-2 lg:col-end-3 
+                flex flex-col lg:flex-row items-center gap-6 ">
+                <img class="h-44 w-auto" src="assets/img/logo-azul.png" alt="Logo clínica">
+                <h1 class="text-5xl text-color-destacado font-bold font-barlow">CLÍNICA PERRETES</h1>
+            </article>
+            <article id="inicio-horario" class="row-start-3 col-start-1 row-end-4 col-end-2 
+                md:row-start-2 md:col-start-1 md:row-end-3 md:col-end-2
+                lg:row-start-2 lg:col-start-1 lg:row-end-3 lg:col-end-2
+                md:bg-color-secundario md:shadow-md rounded-md flex items-center justify-center">
+                <div id="info-horario">
+                    <div id="horario">
+                        <h4 class="font-bold text-xl">Nuestro horario</h4>
+                        <p class="font-bold">De lunes a viernes</p>
+                        <p>09:30 - 13:30</p>
+                        <p>16:30 - 20:30</p>
+                        <p class="font-bold">Sábado</p>
+                        <p>09:30 - 13:30</p>
+                    </div>
+                </div>
+            </article>
+            <article id="inicio-datos" class="row-start-4 col-start-1 row-end-5 col-end-2 
+            md:row-start-2 md:col-start-2 md:row-end-3 md:col-end-3 
+            lg:row-start-2 lg:col-start-2 lg:row-end-3 lg:col-end-3
+            bg-color-secundario shadow-md rounded-md flex flex-col items-start justify-center p-3 gap-3">
+                <div class="flex items-center gap-3">
+                    <img src="assets/icons/map-pin.svg">
+                    <span>Av. Francisco Ayala, 18014 Granada</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <img src="assets/icons/phone.svg">
+                    <span>999 99 99 99</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <img src="assets/icons/mail-forward.svg">
+                    <span>clinica@mail.com</span>
+                </div>
+            </article>
+            <article id="inicio-cita" class="row-start-5 col-start-1 row-end-6 col-end-2 
+            md:row-start-3 md:col-start-1 md:row-end-4 md:col-end-3 
+            lg:row-start-3 lg:col-start-1 lg:row-end-4 lg:col-end-3
+            bg-color-destacado text-white shadow-md rounded-md flex items-center justify-around">
+                <p class="text-2xl">Pide cita online y <br> contacta con nosotros</p>
+                <a href="#" class=" p-2 bg-white text-color-destacado rounded-md hover:scale-110 transition">
+                    Pedir Cita
+                </a>
+            </article>
+            <article id="inicio-img" class="hidden lg:row-start-1 lg:col-start-3 lg:row-end-4 lg:col-end-5  bg-color-secundario shadow-md rounded-md lg:flex items-center justify-center">
+                <div class="h-full flex items-end justify-center">
+                    <img src="assets/img/principal.png" alt="Imagen de un perro de raza Vizsla" class="h-full w-auto">
+                </div>
+            </article>
+        </section>
+
+        <!--Comentarios-->
+        <section id="comentarios">
+            <article id="comentarios-titulo" class="flex items-center gap-4">
+                <img src="assets/icons/message.svg" alt="Icono de un bocadillo">
+                <h2 class="font-semibold text-3xl font-barlow">Comentarios</h2>
+            </article>
+            <p class="mb-5">Conoce los comentarios de nuestros clientes.</p>
+            <article class="swiper p-4 bg-color-fondo3 shadow-md rounded-md  z-10">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide bg-white rounded-md p-6 shadow-md m-6 w-24 h-72">
+                        <div class="flex items-center gap-4">
+                            <img src="assets/img/gato.jpg" alt="Imagen de perfil"
+                                class="h-7 w-auto lg:h-10 rounded-full">
+                            <h4>Francisco López</h4>
+                        </div>
+                        <div>
+                            <p class="mb-8">
+                                Hace unos años llevo a mi perro, son muy profesionales y me
+                                encanta el trato que nos dan, aparte del precio asequible y competitivo que tienen. Lo
+                                recomiendo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-white rounded-md p-6 shadow-md m-6 w-24 h-72">
+                        <div class="flex items-center gap-4">
+                            <img src="assets/img/img-coment.jpg" alt="Imagen de perfil"
+                                class="h-7 w-auto lg:h-10 rounded-full">
+                            <h4>Sofía Reina</h4>
+                        </div>
+                        <div>
+                            <p class="mb-8">
+                                Estoy muy contenta con el equipo de la clínica. Son un equipo muy
+                                profesional, el personal muy humano y cariñosos con los perritos.
+                                Te lo explican todo muy bien.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-white rounded-md p-6 shadow-md m-6 w-24 h-72">
+                        <div class="flex items-center gap-4">
+                            <img src="assets/img/img-coment3.jpg" alt="Imagen de perfil"
+                                class="h-7 w-auto lg:h-10 rounded-full">
+                            <h4>Carla Muñoz</h4>
+                        </div>
+                        <div>
+                            <p class="mb-8">
+                                Todos y cada uno de los veterinarios que me han atendido han tratado muy bien a mis
+                                gatos, se nota que les gusta su trabajo y los animales. Lo recomiendo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-white rounded-md p-6 shadow-md m-6 w-24 h-72">
+                        <div class="flex items-center gap-4">
+                            <img src="assets/img/img-coment2.jpg" alt="Imagen de perfil"
+                                class="h-7 w-auto lg:h-10 rounded-full">
+                            <h4>José Salto</h4>
+                        </div>
+                        <div>
+                            <p class="mb-8">
+                                Se nota que aman a los animales y quieren lo mejor para ellos.
+                                Todo el equipo es un encanto, siempre están ahí con una gran sonrisa y atendiendo a
+                                todas tus dudas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </article>
+        </section>
+
+        <!--Preguntas-->
+
+        <div id="accordion-open" data-accordion="open">
+            <div id="preguntas-titulo" class="flex items-center gap-4 mb-5">
+                <img src="assets/icons/help-square-rounded.svg" alt="Icono signo de interrogación">
+                <h2 class="font-semibold  text-3xl font-barlow">Preguntas Frecuentes</h2>
+            </div>
+            <h2 id="accordion-open-heading-1">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-open-body-1" aria-expanded="true"
+                    aria-controls="accordion-open-body-1">
+                    <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                clip-rule="evenodd"></path>
+                        </svg> ¿Cómo puedo pedir cita? </span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-open-body-1" class="hidden" aria-labelledby="accordion-open-heading-1">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Puedes ponerte en contacto con nosotros para
+                        reservar una cita, a través de nuestros telefonos, via email o más facil aún con nuestros
+                        formulario. </p>
+                </div>
+            </div>
+            <h2 id="accordion-open-heading-2">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-open-body-2" aria-expanded="false"
+                    aria-controls="accordion-open-body-2">
+                    <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                clip-rule="evenodd"></path>
+                        </svg>¿Hacen visitas a domicilio? </span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Podemos acudir al domicilio en los siguientes
+                        casos: En casos de discapacidad o movilidad reducida de sus propietarios. Para el caso en que
+                        los propietarios pertenezcan al grupo de la llamada 3ª edad. En casos justificados de extrema
+                        urgencia o de esceso de nerviosismo de tu mascota. </p>
+                </div>
+            </div>
+            <h2 id="accordion-open-heading-3">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-open-body-3" aria-expanded="false"
+                    aria-controls="accordion-open-body-3">
+                    <span class="flex items-center"><svg class="w-5 h-5 me-2 shrink-0" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                clip-rule="evenodd"></path>
+                        </svg> ¿Qué hago en caso de una urgencia? </span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
+                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">
+                        En caso de producirse durante el horario de apertura de la clínica, rogamos nos llamen
+                        inmediatamente antes de traer a su mascota con el fin de preparar todo lo necesario, así como,
+                        asignar al personal adecuado para una atención correcta.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <!--Footer-->
+    <footer class="flex flex-col justify-center gap-9 py-10 bg-color-destacado text-white mt-10
+    md:flex-row
+    ">
+        <div id="footer-logo" class="flex justify-center">
+            <img src="assets/img/logo-blanco.png" alt="Logo clínica" class="w-40 h-auto">
+        </div>
+        <hr class="hidden md:block">
+        <div id="footer-informacion" class="flex flex-col items-center gap-1">
+            <h3 class="mb-5 font-bold">Información</h3>
+            <a href="#preguntas">Preguntas Frecuentes</a>
+        </div>
+        <hr class="hidden md:block">
+        <div id="footer-siguenos" class="flex flex-col items-center">
+            <h3 class="mb-5 font-bold">Síguenos</h3>
+            <div class="flex items-center gap-4">
+                <img src="assets/icons/brand-facebook.svg" alt="Facebook logo">
+                <span>Facebook</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <img src="assets/icons/brand-instagram.svg" alt="Instagram logo">
+                <span>Instagram</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <img src="assets/icons/brand-x.svg" alt="Twitter logo">
+                <span>Twitter</span>
+            </div>
+        </div>
+        <hr class="hidden md:block">
+        <div id="footer-contacto" class="flex flex-col items-center">
+            <h3 class="mb-5 font-bold ">Contacto</h3>
+            <div class="flex items-center gap-4">
+                <img src="assets/icons/map-pin.svg">
+                <span>Av. Francisco Ayala, 18014 Granada</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <img src="assets/icons/phone.svg">
+                <span>999 99 99 99</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <img src="assets/icons/mail-forward.svg">
+                <span>clinica@mail.com</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
